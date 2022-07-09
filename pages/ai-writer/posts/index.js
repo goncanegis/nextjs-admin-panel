@@ -56,9 +56,9 @@ export default function Posts() {
         <title>NextJS Admin Panel 🖤</title>
       </Head>
 
-      <section className={`m-3 mt-0 p-3 ${styles.mainSection}`}>
-        <div className="d-flex">
-          <div className="filters-container me-3 d-flex flex-direction-column justify-content-between">
+      <section className={`m-3 mt-0 mainSection`}>
+        <div className="d-flex main-container w-100 justify-content-between">
+          <div className="filters-container p-3 d-flex flex-direction-column justify-content-between">
             <div className="d-flex justify-content-between">
               <div className="filter select">
                 <p className="filter-label">Konu Başlığı</p>
@@ -220,7 +220,7 @@ export default function Posts() {
               </div>
             </div>
 
-            <div className="d-flex ">
+            <div className="d-flex">
               <div
                 className="filter textarea large w-100
               "
@@ -345,7 +345,7 @@ export default function Posts() {
             </div>
           </div>
 
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column p-3 posts-container">
             <Link href="/ai-writer/posts/first-post">
               <a>First Post</a>
             </Link>
