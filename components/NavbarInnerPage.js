@@ -11,7 +11,7 @@ const NavbarInnerPage = () => {
       <Link href="/ai-writer/posts">
         <a
           className={
-            currentRoute === '/ai-writer/posts'
+            currentRoute.includes('/ai-writer/posts')
               ? 'innerNavLink d-flex align-items-center active'
               : 'innerNavLink d-flex align-items-center'
           }

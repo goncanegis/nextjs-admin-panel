@@ -1,20 +1,21 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 import NestedLayout from '../../components/NestedLayout';
-import styles from '../../styles/ai-writer.module.css';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function AIWriter() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/ai-writer/posts');
+  }, []);
+
   return (
     <>
       <Head>
         <title>NextJS Admin Panel 🖤</title>
       </Head>
-
-      <section className={`m-3 mt-0 p-3 ${styles.mainSection}`}>
-        <div className="d-flex">
-          <h1>TODO: Redirect to posts page</h1>
-        </div>
-      </section>
     </>
   );
 }

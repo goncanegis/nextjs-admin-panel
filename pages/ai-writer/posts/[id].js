@@ -1,26 +1,45 @@
 import Head from 'next/head';
 import Layout from '../../../components/Layout';
-
-import styles from '../../../styles/ai-writer.module.css';
-import { useRouter } from 'next/router';
-
+import NestedLayout from '../../../components/NestedLayout';
 import NestedLayoutPosts from '../../../components/NestedLayoutPosts';
+import { useRouter } from 'next/router';
+0;
+import { getAllPostIds, getPostData } from '../../../lib/posts';
 
-export default function Post() {
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const postData = await getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
+
+export default function Post({ postData }) {
   const router = useRouter();
   const { id } = router.query;
 
   return (
     <>
       <Head>
-        <title>NextJS Admin Panel 🖤</title>
+        <title>{postData.title}</title>
       </Head>
 
-      <section className={`m-3 mt-0 p-3 ${styles.mainSection}`}>
-        <div className="d-flex">
-          <p>Post id: {id}</p>
-        </div>
-      </section>
+      {postData.title}
+      <br />
+
+      <div
+        className="post-content"
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+      />
     </>
   );
 }
@@ -28,7 +47,9 @@ export default function Post() {
 Post.getLayout = function getLayout(page) {
   return (
     <Layout>
-      <NestedLayoutPosts>{page}</NestedLayoutPosts>
+      <NestedLayout>
+        <NestedLayoutPosts>{page}</NestedLayoutPosts>
+      </NestedLayout>
     </Layout>
   );
 };
