@@ -20,6 +20,11 @@ a {
   text-decoration: none;
 }
 
+a:hover,
+.nav-link:hover {
+  color: var(--mint);
+}
+
 p {
   margin-bottom: 0;
 }

@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 const sidebarData = [
   {
     title: 'Yeni Proje',
-    href: '/new',
+    href: '/new-project',
     icon: 'addIcon',
   },
   {

@@ -58,6 +58,7 @@ function Filters() {
               id="dropdownMenuButton2"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              aria-label="dropdown"
             >
               Konu Başlığı
             </button>
@@ -304,7 +305,7 @@ function Filters() {
       </div>
 
       <div className="d-flex w-100 justify-content-center">
-        <button type="submit" className="btn result-button">
+        <button type="submit" className="btn result-button" aria-label="submit">
           Sonuç Bul
         </button>
       </div>

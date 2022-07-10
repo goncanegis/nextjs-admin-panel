@@ -59,7 +59,7 @@ export default function Post({ postData }) {
           </div>
         </div>
         <div className="d-flex align-items-center h-100">
-          <button className="btn p-0">
+          <button className="btn p-0" aria-label="others">
             <Others fill="white" />
           </button>
         </div>

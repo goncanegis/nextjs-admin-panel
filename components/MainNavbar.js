@@ -6,7 +6,7 @@ const MainNavbar = () => {
   return (
     <div className="d-flex flex-column flex-nowrap flex-lg-row w-100 align-items-start align-items-lg-center top-nav p-3">
       <div className="welcome-text d-flex mb-sm-3 mb-lg-0">
-        <p className="">Arge Projesi’ne Hoşgeldin Örnek İnsan</p>
+        <p>Arge Projesi’ne Hoşgeldin Örnek İnsan</p>
       </div>
       <div className="d-flex w-100 w-lg-60 align-items-center justify-content-lg-end">
         <div className="search-bar d-flex bg-dark px-2">
