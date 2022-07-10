@@ -34,9 +34,9 @@ export default function Posts({ allPostsData }) {
             key={id}
           >
             <Link href={`/ai-writer/posts/${id}`}>
-              <a className="post-title">
+              <a className="post-title d-flex align-items-start">
                 <AITextIcon color="white" className="ms-3 me-3" />
-                {title}
+                <h3 className="d-flex">{title}</h3>
               </a>
             </Link>
           </div>
