@@ -32,6 +32,7 @@ p {
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -46,17 +47,25 @@ p {
 
 ::-webkit-scrollbar-thumb {
   background-color: #8e8e93;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 .main-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
 }
 
 .main-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
   width: 100%;
@@ -64,7 +73,12 @@ p {
 }
 
 .main-layout .page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
 }
@@ -76,7 +90,11 @@ p {
   border-bottom-right-radius: 10px;
 }
 .navbar {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -95,7 +113,11 @@ p {
 }
 
 .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   padding: 12px;
@@ -117,10 +139,13 @@ p {
 }
 
 .nav-link.nav-link.active img {
+  -webkit-filter: brightness(0.1);
   filter: brightness(0.1);
 }
 
 .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 0.75rem;
 }
@@ -135,18 +160,31 @@ p {
 
 .nested-layout {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 .row > * {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .notification-container {
   width: 32px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -173,11 +211,17 @@ p {
   top: 10px;
   position: absolute;
   right: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
   transition: var(--transition);
 }
 
 .dropdown-toggle.show::after {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
 
@@ -202,6 +246,22 @@ p {
   font-weight: 500;
 }
 
+.search-bar input::-webkit-input-placeholder {
+  color: #d2d2d2;
+}
+
+.search-bar input::-moz-placeholder {
+  color: #d2d2d2;
+}
+
+.search-bar input:-ms-input-placeholder {
+  color: #d2d2d2;
+}
+
+.search-bar input::-ms-input-placeholder {
+  color: #d2d2d2;
+}
+
 .search-bar input::placeholder {
   color: #d2d2d2;
 }
@@ -214,6 +274,8 @@ p {
 }
 
 .innerNavLink {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -247,13 +309,20 @@ p {
 }
 
 .innerNavLink.active img {
+  -webkit-filter: brightness(0.1) invert(87%) sepia(93%) saturate(6351%)
+    hue-rotate(154deg) brightness(86%) contrast(92%);
   filter: brightness(0.1) invert(87%) sepia(93%) saturate(6351%)
     hue-rotate(154deg) brightness(86%) contrast(92%);
 }
 
 .mainSection {
   max-width: 1350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 532px;
   border: 1px solid var(--border-color);
@@ -266,7 +335,12 @@ p {
 }
 
 .filters-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 35%;
   min-height: 531px;
@@ -281,7 +355,12 @@ p {
 }
 
 .filter.select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 48%;
 }
@@ -301,6 +380,7 @@ p {
 .filter.select .dropdown-toggle.show {
   background: rgba(43, 43, 54, 0.4);
   border: 0.5px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
 }
 
@@ -314,14 +394,20 @@ p {
   border-radius: 10px;
   background: rgba(33, 34, 45, 0.4);
   border: 0.5px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
   border-radius: 10px;
   padding: 0.5rem;
+  -webkit-filter: drop-shadow(0px 2px 10px #020203);
   filter: drop-shadow(0px 2px 10px #020203);
 }
 
 .filter.select .dropdown-menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: white;
   font-size: 13px;
@@ -363,7 +449,12 @@ p {
 }
 
 .filter.textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -378,8 +469,14 @@ p {
 .result-button {
   width: 200px;
   height: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: var(--main-color);
   background-color: var(--mint);
@@ -430,6 +527,7 @@ p {
   width: 390px;
   overflow: hidden;
   white-space: nowrap;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   color: white;
   font-weight: 600;
@@ -444,6 +542,7 @@ p {
   margin-bottom: 0;
   max-width: 350px;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   color: white;
 }
