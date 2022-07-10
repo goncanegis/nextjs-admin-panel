@@ -87,7 +87,7 @@ export default function Sidebar() {
                   currentRoute.includes(href) ? 'nav-link active' : 'nav-link'
                 }
               >
-                <img src={`/images/${icon}.svg`} alt={title} />
+                <img src={`/images/icon/${icon}.svg`} alt={title} />
                 {title}
               </a>
             </Link>
@@ -103,7 +103,7 @@ export default function Sidebar() {
                 currentRoute === '/logout' ? 'nav-link active' : 'nav-link'
               }
             >
-              <img src={'/images/logoutIcon.svg'} alt={'logout'} />
+              <img src={'/images/icon/logoutIcon.svg'} alt={'logout'} />
               {'Çıkış Yap'}
             </a>
           </Link>

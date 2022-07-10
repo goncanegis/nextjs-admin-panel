@@ -16,7 +16,7 @@ const NavbarInnerPage = () => {
               : 'innerNavLink d-flex align-items-center'
           }
         >
-          <img src="/images/aiTextIcon.svg" alt="ai text writer" />
+          <img src="/images/icon/aiTextIcon.svg" alt="ai text writer" />
           <p>AI Metin Yazarı</p>
         </a>
       </Link>
@@ -29,7 +29,7 @@ const NavbarInnerPage = () => {
               : 'innerNavLink d-flex align-items-center'
           }
         >
-          <img src="/images/historyIcon.svg" alt="history" />
+          <img src="/images/icon/historyIcon.svg" alt="history" />
           <p>Geçmiş</p>
         </a>
       </Link>

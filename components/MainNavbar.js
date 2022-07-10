@@ -8,12 +8,12 @@ const MainNavbar = () => {
       <div className="welcome-text d-flex mb-sm-3 mb-lg-0">
         <p className="">Arge Projesi’ne Hoşgeldin Örnek İnsan</p>
       </div>
-      <div className="d-flex w-100 w-lg-60 align-items-center justify-content-lg-end pe-5">
-        <div className="search-bar d-flex bg-dark px-2 rounded">
-          <img src="/images/searchIcon.svg" alt="Arama Yapınız" />
+      <div className="d-flex w-100 w-lg-60 align-items-center justify-content-lg-end">
+        <div className="search-bar d-flex bg-dark px-2">
+          <img src="/images/icon/searchIcon.svg" alt="Arama Yapınız" />
           <input
-            className="form-control border-0 bg-dark text-white "
-            placeholder="Arama Yapınız..."
+            className="form-control border-0 bg-dark p-2 text-white "
+            placeholder="Arama yapın..."
             type="text"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
@@ -21,9 +21,9 @@ const MainNavbar = () => {
         </div>
 
         <div className="d-flex notification-container position-relative mx-3">
-          <img src="/images/bellIcon.svg" alt="Bildirimler" />
+          <img src="/images/icon/bellIcon.svg" alt="Bildirimler" />
           <img
-            src="/images/badge.svg"
+            src="/images/icon/badge.svg"
             className="position-absolute notification-badge"
             alt="badge"
           />

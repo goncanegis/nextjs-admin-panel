@@ -4,7 +4,7 @@ import Layout from '../../../components/Layout';
 import NestedLayout from '../../../components/NestedLayout';
 import NestedLayoutPosts from '../../../components/NestedLayoutPosts';
 import { getSortedPostsData } from '../../../lib/posts';
-import AITextIcon from '../../../public/images/aiTextIcon.svg';
+import AITextIcon from '../../../public/images/icon/aiTextIcon.svg';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();

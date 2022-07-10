@@ -1,6 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import CartIcon from '../public/images/CartIcon';
+import CartIcon from '../public/images/icon/CartIcon';
 
 const filtersData = [
   {
@@ -48,7 +48,7 @@ const filtersData = [
 function Filters() {
   return (
     <div className="filters-container p-3 d-flex flex-direction-column justify-content-between">
-      <div className="d-flex justify-content-between">
+      <div className="d-flex justify-content-between flex-wrap">
         <div className="filter select">
           <p className="filter-label">Konu Başlığı</p>
           <div className="dropdown">

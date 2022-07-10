@@ -19,7 +19,7 @@ export default function Home() {
           Bootstrap and custom CSS was used to style the app.
         </p>
         <h3>Try It Out</h3>
-        <p>Most links work!</p>
+        <p>Check the AI Text Editor!</p>
       </section>
     </>
   );
